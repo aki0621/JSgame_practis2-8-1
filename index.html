@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta = charset="UTF-8">
+        <script>
+            let Sta;
+
+            function start(){
+                sta = new Date();
+                document.getElementById('result').textContent = "start!!";
+            }            
+
+            function stop(){
+                let now = new Date();
+                let res = (now.getTime() - sta.getTime()) / 1000;
+                document.getElementById("result").textContent = res + "秒!!";
+                if(res >= 9.5 && res <= 10.5){
+                    document.getElementById("cong").textContent = "すごい(ﾟ∀ﾟ)!!";
+                }
+            }   
+        </script>
+    </head>
+    <body>
+        <button onclick="start()">スタート</button>
+        <button onclick="stop()">ストップ</button>
+        <h2 id="result"></h2>
+        <h2 id="cong"></h2>
+    </body>
+</html>
